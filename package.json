@@ -1,19 +1,28 @@
 {
   "name": "strophejs-plugin-caps",
   "version": "1.0.0",
-  "description": "Strophe.caps.js is a plugin to provide XMPP Entity Capabilities ( XEP-0115 ).",
-  "main": "strophe.caps.jsonly.js",
+  "description": "A strophe.js plugin for XEP-0115 XMPP Entity Capabilities",
+  "main": "lib/strophe.caps.js",
   "scripts": {
+    "build": "rollup src/strophe.caps.js -f umd -g strophe.js:window -e strophejs-plugin-disco -o lib/strophe.caps.js -m",
+    "prepublish": "npm run --silent build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/omichelsen/strophejs-plugin-caps.git"
+    "url": "git+https://github.com/strophe/strophejs-plugin-caps.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/omichelsen/strophejs-plugin-caps/issues"
+    "url": "https://github.com/strophe/strophejs-plugin-caps/issues"
   },
-  "homepage": "https://github.com/omichelsen/strophejs-plugin-caps#readme"
+  "homepage": "https://github.com/strophe/strophejs-plugin-caps#readme",
+  "devDependencies": {
+    "rollup": "^0.45.0"
+  },
+  "peerDependencies": {
+    "strophe.js": ">=1.2",
+    "strophejs-plugin-disco": ">=0.0.1"
+  }
 }
