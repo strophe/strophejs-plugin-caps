@@ -1,16 +1,3 @@
-/**
- * Entity Capabilities (XEP-0115)
- *
- * Depends on disco plugin.
- *
- * See: http://xmpp.org/extensions/xep-0115.html
- *
- * Authors:
- *   - Michael Weibel <michael.weibel@gmail.com>
- *
- * Copyright:
- *   - Michael Weibel <michael.weibel@gmail.com>
- */
 import { Strophe } from 'strophe.js';
 import 'strophejs-plugin-disco';
 
