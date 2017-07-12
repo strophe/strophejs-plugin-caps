@@ -11,6 +11,8 @@
  * Copyright:
  *   - Michael Weibel <michael.weibel@gmail.com>
  */
+import { Strophe } from 'strophe.js';
+import 'strophejs-plugin-disco';
 
  Strophe.addConnectionPlugin('caps', {
 	/** Constant: HASH
