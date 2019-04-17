@@ -1,4 +1,4 @@
-import { Strophe } from 'strophe.js';
+import { Strophe, b64_sha1 } from 'strophe.js';
 import 'strophejs-plugin-disco';
 
  Strophe.addConnectionPlugin('caps', {
