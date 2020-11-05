@@ -176,7 +176,7 @@ import 'strophejs-plugin-disco';
 	 *   (Boolean) - false, to automatically remove the handler.
 	 */
 	_handleDiscoInfoReply: function(stanza) {
-		var query = stanza.stanza.getElementsByTagName('query')[0],
+		var query = stanza.getElementsByTagName('query')[0],
 			node = query.getAttribute('node').split('#'),
 			ver = node[1],
 			from = stanza.getAttribute('from');
