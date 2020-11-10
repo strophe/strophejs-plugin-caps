@@ -129,7 +129,7 @@ import 'strophejs-plugin-disco';
 	 */
 	_delegateCapabilities: function(stanza) {
 		var from = stanza.getAttribute('from'),
-			c = stanza.querySelector('c'),
+			c = stanza.getElementsByTagName('c')[0],
 			ver = c.getAttribute('ver'),
 			node = c.getAttribute('node');
 		if (!this._knownCapabilities[ver]) {
@@ -176,7 +176,7 @@ import 'strophejs-plugin-disco';
 	 *   (Boolean) - false, to automatically remove the handler.
 	 */
 	_handleDiscoInfoReply: function(stanza) {
-		var query = stanza.querySelector('query'),
+		var query = stanza.getElementsByTagName('query')[0],
 			node = query.getAttribute('node').split('#'),
 			ver = node[1],
 			from = stanza.getAttribute('from');
